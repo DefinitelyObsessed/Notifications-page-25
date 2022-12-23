@@ -1,0 +1,365 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+/* Roots */
+:root {
+  --clr-red: hsl(1, 90%, 64%);
+  --clr-blue: hsl(219, 85%, 26%);
+  --clr-white-1: hsl(0, 0%, 100%);
+  --clr-white-2: hsl(210, 60%, 98%);
+  --clr-grey-blue-1: hsl(211, 68%, 94%);
+  --clr-grey-blue-2: hsl(205, 33%, 90%);
+  --clr-grey-background-hover: hsl(219, 14%, 63%);
+  --clr-grey-font: hsl(219, 12%, 42%);
+  --clr-black: hsl(224, 21%, 14%);
+  --ff-body: 'Plus Jakarta Sans', sans-serif;
+  --fw-500: 500;
+  --fw-800: 800;
+  --fs-h1: 1.3rem;
+  --fs-h3: 0.9rem;
+}
+
+/* Similar Parts */
+*, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-body);
+  line-height: 1.5;
+}
+
+h2, h4, h3, p {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-500);
+}
+
+h1, span {
+  font-weight: var(--fw-800);
+}
+
+h1, .span-1 {
+  color: var(--clr-black);
+}
+
+h2, h3, p {
+  color: var(--clr-grey-font);
+}
+
+/* Main Block */
+main {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+}  
+
+/* Semi Main Block */
+.semi-main {
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 90vw;
+}
+
+/* First Block */
+.first-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h1 span {
+  background-color: var(--clr-blue);
+  border-radius: 20%;
+  color: var(--clr-white-1);
+  padding: 0.2rem 0.8rem;
+}
+
+/* Second Block */
+.second-block {
+  margin: 2rem 0;
+}
+
+img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.profiles {
+  margin: 0.6rem 0;
+}
+
+.display-flex {
+  display: flex;
+  gap: 0.7rem;
+  max-width: 80vw;
+  padding: 1rem;
+}
+
+.sub-profile-5 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80vw;
+  padding: 1rem;
+}
+
+.sub-semi-profile-5 {
+  display: flex;
+  gap: 0.7rem;
+}
+
+h4 {
+  color: var(--clr-grey-background-hover);
+}
+
+.sub-profile-4 p {
+  border: solid 1px var(--clr-grey-blue-2);
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.profile-3 .span-2, .profile-7 .span-2 {
+  color: var(--clr-blue);
+}
+
+/* Hover Section */
+.second-block span, h2, p, .img-chess {
+  cursor: pointer;
+}
+
+.second-block span {
+  transition: color 200ms ease-in-out;
+}
+
+.sub-profile-4 p, .img-chess {
+  transition: background-color 200ms ease-in-out;
+}
+
+.img-chess {
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+.second-block span:hover {
+  color: var(--clr-blue);
+}
+
+.sub-profile-4 p:hover {
+  background-color: var(--clr-grey-blue-2);
+}
+
+.img-chess:hover {
+  background-color: var(--clr-grey-blue-2);
+}
+
+/* Javascript Section */
+.red-dot {
+  background-color: var(--clr-white-2);
+  border-radius: 10px;
+}
+
+.red-dot h3::after {
+  align-self: center;
+  background-color: var(--clr-red);
+  border-radius: 50%;
+  content: '';
+  height: 0.6rem;
+  margin: 0.3rem 0 0 0.6rem;
+  position: absolute;
+  width: 0.6rem;
+}
+
+/* Responsiveness Section */
+@media (min-width:700px) {
+  body {
+    background-color: var(--clr-white-2);
+  }
+
+  main {
+    align-items: center;
+    background-color: var(--clr-white-1);
+    border-radius: 20px;
+    box-shadow: var(--clr-grey-blue-1) 0px 8px 24px;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    margin: 4rem auto;
+    max-width: 600px;
+  }
+
+  .semi-main {
+    margin: 0 auto;
+    max-width: 550px;
+  }
+
+  .second-block {
+    margin: 2rem 0 0 0;
+  }
+
+  .profiles {
+    margin: 1rem 0;
+  }
+
+  .display-flex {
+    gap: 1rem;
+    max-width: 450px;
+  }
+}
+
+@media (min-width:1300px) {
+  main {
+    max-width: 55vw;
+  }
+
+  .semi-main {
+    max-width: 50vw;
+  }
+
+  .display-flex {
+    max-width: 45vw;
+  }
+
+  img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  :root {
+    --fs-h1: 1.5rem;
+    --fs-h3: 1rem;
+  }
+}
+
+@media (min-width:1600px) {
+  h1 span {
+    padding: 0.4rem 1rem;
+  }
+
+  .profiles {
+    margin: 1rem 0;
+  }
+
+  .display-flex {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .sub-profile-5 {
+    padding: 1.5rem;
+  }
+
+  .sub-semi-profile-5 {
+    gap: 1.5rem;
+  }
+
+  .sub-profile-4 p {
+    padding: 1.5rem;
+  }
+
+  img {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .red-dot h3::after {
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+
+  :root {
+    --fs-h1: 1.6rem;
+    --fs-h3: 1.1rem;
+  }
+}
+
+@media (min-width:1900px) {
+  h1 span {
+    padding: 0.5rem 1.1rem;
+  }
+
+  .profiles {
+    margin: 1.5rem 0;
+  }
+
+  .display-flex {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sub-profile-5 {
+    padding: 2rem;
+  }
+
+  .sub-semi-profile-5 {
+    gap: 2rem;
+  }
+
+  .sub-profile-4 p {
+    padding: 2rem;
+  }
+
+  img {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+
+  .red-dot h3::after {
+    height: 1rem;
+    margin: 0.6rem 0 0 1rem;
+    width: 1rem;
+  }
+
+  :root {
+    --fs-h1: 1.9rem;
+    --fs-h3: 1.4rem;
+  }
+}
+
+@media (min-width:2400px) {
+  h1 span {
+    padding: 0.7rem 1.3rem;
+  }
+
+  .profiles {
+    margin: 2rem 0;
+  }
+
+  .display-flex {
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .sub-profile-5 {
+    padding: 2.5rem;
+  }
+
+  .sub-semi-profile-5 {
+    gap: 2.5rem;
+  }
+
+  .sub-profile-4 p {
+    padding: 2.5rem;
+  }
+
+  img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .red-dot h3::after {
+    height: 1.5rem;
+    margin: 0.6rem 0 0 1rem;
+    width: 1.5rem;
+  }
+
+  :root {
+    --fs-h1: 2.3rem;
+    --fs-h3: 1.8rem;
+  }
+}
